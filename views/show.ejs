@@ -1,0 +1,24 @@
+<% include templates/header.ejs %>
+
+<div class="ui main text container segment">  <!-- for border use segment -->
+   	<div class="ui huge header"><%-found_blog.title %></h1></div>
+ <div class="ui top attached">
+	 <div class="item">
+		 <img class="ui centered rounded image" src="<%-found_blog.image%>">
+		 <div class=content>
+			 <span><strong><%=found_blog.created.toDateString() %></strong></span>
+		 </div>
+		 <div class="description">
+			<p><%-found_blog.body%></p>  <!--  due to this user can insert html also...-->
+		 </div>
+		 <a  href="/blogs/<%=found_blog._id%>/edit">Edit</a>
+		 
+		  <form class="ui form" action="/blogs/<%=found_blog._id%>?_method=DELETE" method="POST">
+			  <button>Submitt</button>
+		 </form>
+	 </div>
+</div>	
+</p>
+</div>
+
+<% include templates/footer.ejs %>

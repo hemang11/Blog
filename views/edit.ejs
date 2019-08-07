@@ -1,0 +1,24 @@
+<% include templates/header.ejs %>
+<div class="ui main text container segment">
+<div class="ui huge header">Edit blog</div>
+	
+<!--form styling by SEMENTIC UI-->
+	
+<form action="/blogs/<%=blogs._id%>?_method=PUT" method="POST" class="ui form">
+	<div class="field">
+		<label>Title</label>
+		<input type="text" name="name" value="<%=blogs.title%>" required>
+	</div>
+	<div class="field">
+		<label>Image</label>
+		<input type="text" name="image" value="<%=blogs.image%>" required>
+	</div>
+	<div class="field">
+		<label>Blog</label>
+		<textarea required name="description"><%-blogs.body%></textarea>
+	</div>
+	<input type="submit" class="ui basic big violet button">
+</form>
+	
+</div>
+<% include templates/footer.ejs %>

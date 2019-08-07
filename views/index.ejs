@@ -1,0 +1,13 @@
+<% include templates/header.ejs %>
+
+<div class="ui container main">
+<% for(var i=0;i<blog_create.length;i++){%>
+     <h1><%= blog_create[i].title %></h1>
+     <img class="image" src="<%=  blog_create[i].image%>" width="500px" height="400px">
+     <p><%= blog_create[i].body.substring(0,100)%>...</p> <!-- it will show first 100 char only -->
+	 <a href="/blogs/<%=blog_create[i]._id%>">More info...</a>  <!-- blog_create is that blog whose is is being taken-->
+	<span><strong><%= blog_create[i].created.toDateString()%></strong></span>
+<%}%>
+</div>
+
+<% include templates/footer.ejs %>
