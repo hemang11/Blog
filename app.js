@@ -100,6 +100,6 @@ app.delete("/blogs/:id",function(req,res){
 //	body:"Here comes our first BLog!!!"
 //});
 
-app.listen(3000,process.env.IP,function(){  // can run on any port
+app.listen(process.env.PORT,process.env.IP,function(){  // can run on any port
 	console.log("Our Blog Server has started");
 });
