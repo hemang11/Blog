@@ -11,10 +11,9 @@
 		 <div class="description">
 			<p><%-found_blog.body%></p>  <!--  due to this user can insert html also...-->
 		 </div>
-		 <a  href="/blogs/<%=found_blog._id%>/edit">Edit</a>
-		 
+		 <a  class="ui  green button" href="/blogs/<%=found_blog._id%>/edit">Edit</a>
 		  <form class="ui form" action="/blogs/<%=found_blog._id%>?_method=DELETE" method="POST">
-			  <button>Submitt</button>
+			  <button class="ui red button">Delete</button>
 		 </form>
 	 </div>
 </div>	

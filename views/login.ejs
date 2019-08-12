@@ -1,0 +1,20 @@
+<% include templates/header.ejs %>
+<div class="ui main text container segment">
+<div class="ui huge header">Login</div>
+	
+<!--form styling by SEMENTIC UI-->
+	
+<form action="/login" method="POST" class="ui form">
+	<div class="field">
+		<label>Username</label>
+		<input type="text" name="username" placeholder="username" required>
+	</div>
+	<div class="field">
+		<label>Password</label>
+		<input type="text" name="password" placeholder="password" required>
+	</div>
+	<input type="submit" class="ui basic big violet button">
+	Do not have an account? <a href="/register">Sign Up</a>
+</form>
+</div>
+<% include templates/footer.ejs %>
