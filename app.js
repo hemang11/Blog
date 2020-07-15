@@ -10,7 +10,7 @@ app.use(express.static("css"));  // static files in css ....
 app.use(methodOverride("_method"));
 
 //mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});// ** this mongodb connects to local mongodb server **
-mongoose.connect('mongodb+srv://Hemang:Hemang%40123@blogs-uq9an.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true});
+mongoose.connect('mongodb+srv://Hemang:<Password of mongoDB>@blogs-uq9an.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true});
 // this connect method uses mongodb atlas which is a hosting database...
 app.use(bodyParser.urlencoded({extended:true}));
 mongoose.set('useFindAndModify', false);
